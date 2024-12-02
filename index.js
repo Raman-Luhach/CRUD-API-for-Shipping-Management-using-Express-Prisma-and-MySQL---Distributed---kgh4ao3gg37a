@@ -72,7 +72,7 @@ const get = async (req , res) =>{
   }
 
   const x = await prisma.Shipping.findMany({
-    where : {id : parseInt(id)}
+    where : {userId : parseInt(id)}
   })
 
   return res.status(200).json(x)
