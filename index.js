@@ -71,7 +71,7 @@ const get = async (req , res) =>{
     return res.status(200).json(x)
   }
 
-  const x = await prisma.Shipping.findUnique({
+  const x = await prisma.Shipping.findMany({
     where : {id : parseInt(id)}
   })
 
